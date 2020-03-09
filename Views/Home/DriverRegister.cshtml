@@ -1,0 +1,86 @@
+@model Driver
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    
+    <div class="accesBoxesDriver">
+        <a class="login_account_links" asp-action="Index" asp-controller="Truber">Home</a>
+        <a class="login_account_links" asp-action="LogOut" asp-controller="Home">LogOut</a>
+
+        <h1>Register To Become A Driver: </h1>
+        <form class="col-11" asp-action="RegisterDriver" asp-controller="Home" method="post">
+            <div class="form-group">
+                <span asp-validation-for="FirstName"></span>
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="LastName"></span>
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="Email"></span>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="DateOfBirth"></span>
+                <label asp-for="DateOfBirth"></label>
+                <input asp-for="DateOfBirth" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="CarMake"></span>
+                <label asp-for="CarMake"></label>
+                <input asp-for="CarMake" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="CarModel"></span>
+                <label asp-for="CarModel"></label>
+                <input asp-for="CarModel" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="Year"></span>
+                <label asp-for="Year"></label>
+                <input asp-for="Year" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="Plates"></span>
+                <label asp-for="Plates"></label>
+                <input asp-for="Plates" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="Password"></span>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <span asp-validation-for="ConfirmPassword"></span>
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-outline-primary" value="Register as a Driver">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

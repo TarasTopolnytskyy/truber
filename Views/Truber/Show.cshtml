@@ -1,0 +1,73 @@
+@model Truber
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <h1 class="wht"><img src="/../img/logo.jpg" width="80" height="80" class="d-inline-block align-top" alt=""> Truber</h1>
+        
+            <p class="wht">
+                @if(ViewBag.UserId == Model.UserId)
+                {
+                    <a asp-action="Delete" asp-controller="Truber" asp-route-eventId="@Model.TruberId" class="btn btn-danger">Delete A Job</a>
+                }
+                <a asp-action="Index" asp-controller="Truber" class="btn btn-success">Home</a>
+                <a asp-action="LogOut" asp-controller="Home" class="btn btn-outline-danger">LogOut</a>
+            </p>
+    </nav>
+    <div class="mainInfo">
+        <h1>PickUp Address:</h1>
+        <p>@Model.AddressPickUp</p>
+        <h1>DropOff Address:</h1>
+        <p>@Model.AddressDropOff</p>
+        <h1>Total Amount of Miles:</h1>
+        <p>@Model.TotalAmoutOfMiles mi</p>
+        <h1>Price:</h1>
+        <p>$@Model.Price</p>
+    </div>
+    <div class="detailsInfo">
+        <h1>Details:</h1>
+        <p>PickUp Date and Time: @Model.PickUpTime</p>
+        <p>DropOf Date and Time: @Model.DropOffTime</p>
+        <p>Phone number of Customer: @Model.PhoneNumber</p>
+        <p>Weight: @Model.Weight Lb</p>
+        <p>Height: @Model.Height in</p>
+        <p>Width: @Model.Width in</p>
+        <P>Length: @Model.Length in</P>
+    </div>
+    <div class="pickupAddress">
+        <h1>PickUp Address: </h1>
+        <script>$(document).ready(function(){
+            $("h2").each(function(){                         
+                var embed ="<iframe width='425' height='450' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( $(this).text() )+"&amp;output=embed'></iframe>";
+                                $(this).html(embed);
+                            
+            });
+        });</script>
+        <h2>@Model.AddressPickUp</h2>
+    </div>
+    <div class="DropOffAddress">
+        <h1>DropOff Address: </h1>
+        <script>$(document).ready(function(){
+            $("h3").each(function(){                         
+                var embed ="<iframe width='425' height='450' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( $(this).text() )+"&amp;output=embed'></iframe>";
+                                $(this).html(embed);
+                            
+            });
+        });</script>
+        <h3>@Model.AddressDropOff</h3>
+    </div>
+    <div class="button_directions">
+        <a href="https://www.google.com/maps/dir/@Model.AddressPickUp/@Model.AddressDropOff" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Get Directions</a>
+    </div>
+</body>
+</html>
+

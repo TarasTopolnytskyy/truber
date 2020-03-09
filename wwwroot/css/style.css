@@ -1,0 +1,86 @@
+
+body{
+    background-image: url('../img/deliveryHome.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.accesBoxes{
+    background-color: white;
+    padding:20px;
+    border-radius: 20px;
+    margin-top: -30px;
+    width: 500px;
+    height:600px;
+    margin:20px;
+}
+.login_account_links{
+    font-size: 20px;
+    margin: 22px;
+}
+.login_account_links_login{
+    font-size: 20px;
+    margin-left:140px;
+}
+p.Taken{
+    color: red;
+}
+p.NotTaken{
+    color: yellow;
+}
+p.Completed{
+    color: green;
+}
+div#DashboardButtons{
+    margin-left:700px;
+    margin-top:-40px;
+}
+.wht{
+    color: white;
+}
+nav p a{
+    margin:15px;
+}
+table{
+    background-color: white;
+    margin-top:40px;
+}
+.accesBoxesDriver{
+    background-color: white;
+    padding:20px;
+    border-radius: 20px;
+    margin-top: -30px;
+    width: 500px;
+    height:1100px;
+    margin:20px;
+}
+.mainInfo{
+    background-color: white;
+    display: inline-block;
+    padding: 20px;
+    margin-top:50px;
+    margin-left:60px;
+}
+.detailsInfo{
+    background-color: white;
+    display: inline-block;
+    padding: 20px;
+    margin-left:160px;
+    
+}
+.pickupAddress{
+    background-color:white;
+    display: inline-block;
+    padding:20px;
+    margin-top:40px;
+    margin-left:60px;
+}
+.DropOffAddress{
+    background-color:white;
+    display: inline-block;
+    padding:20px;
+    margin-left:30px;
+}
+.button_directions{
+    margin-top:30px;
+    margin-left: 450px;
+}
